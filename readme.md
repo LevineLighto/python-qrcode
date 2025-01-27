@@ -9,7 +9,7 @@ make install
 
 ## Usage
 ```bash
-py main.py <your-data> <output-file-name> --style <rounded|pixel|circle|v-bars|h-bars>
+py main.py <your-data> <output-file-name> --style <rounded|pixel|circle|v-bars|h-bars> --image <path/to/image>
 ```
 
 Example:
@@ -21,3 +21,4 @@ Example:
 |`py main.py "Lorem ipsum dolor sit amet" "sample-circle"  --style circle` | <img src="./docs/sample-circle.png" width="160"/> |
 |`py main.py "Lorem ipsum dolor sit amet" "sample-v-bars"  --style v-bars` | <img src="./docs/sample-v-bars.png" width="160"/> |
 |`py main.py "Lorem ipsum dolor sit amet" "sample-h-bars"  --style h-bars` | <img src="./docs/sample-h-bars.png" width="160"/> |
+|`py main.py "Lorem ipsum dolor sit amet" "sample-image"  --image "./logo.png"` | <img src="./docs/sample-image.png" width="160"/> |
