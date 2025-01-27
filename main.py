@@ -38,7 +38,7 @@ def main(content, name, style):
         version             = None,
         error_correction    = qrcode.constants.ERROR_CORRECT_H,
         box_size            = 100,
-        border              = 10
+        border              = 5
     )
 
     qr.add_data(content)
