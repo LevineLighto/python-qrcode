@@ -12,8 +12,9 @@ from qrcode.image.styles.moduledrawers.pil import SquareModuleDrawer, GappedSqua
 @click.argument('name')
 
 @click.option('--style', '-s')
+@click.option('--image', '-i')
 
-def main(content, name, style):
+def main(content, name, style, image):
     match style:
         case "pixel":
             module_drawer   = GappedSquareModuleDrawer(size_ratio = .75)
@@ -44,11 +45,12 @@ def main(content, name, style):
     qr.add_data(content)
     qr.make(fit = True)
     img = qr.make_image(
-        image_factory   = CustomStyledPilImage,
-        module_drawer   = module_drawer,
-        eye_drawer      = eye_drawer,
-        fill_color      = "black", 
-        back_color      = "white"
+        image_factory       = CustomStyledPilImage,
+        module_drawer       = module_drawer,
+        eye_drawer          = eye_drawer,
+        fill_color          = "black", 
+        back_color          = "white",
+        embeded_image_path  = image,
     )
     img.save("{}.png".format(name))
 
